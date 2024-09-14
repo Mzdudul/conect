@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Play, XIcon } from "lucide-react";
+import {AnimatePresence, motion} from "framer-motion";
+import {Play, XIcon} from "lucide-react";
+import {useState} from "react";
 
-import { cn } from "@/lib/utils";
+import {cn} from "@/lib/utils";
+import Image from "next/image";
 
 type AnimationStyle =
   | "from-bottom"
@@ -26,44 +27,44 @@ interface HeroVideoProps {
 
 const animationVariants = {
   "from-bottom": {
-    initial: { y: "100%", opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-    exit: { y: "100%", opacity: 0 },
+    initial: {y: "100%", opacity: 0},
+    animate: {y: 0, opacity: 1},
+    exit: {y: "100%", opacity: 0},
   },
   "from-center": {
-    initial: { scale: 0.5, opacity: 0 },
-    animate: { scale: 1, opacity: 1 },
-    exit: { scale: 0.5, opacity: 0 },
+    initial: {scale: 0.5, opacity: 0},
+    animate: {scale: 1, opacity: 1},
+    exit: {scale: 0.5, opacity: 0},
   },
   "from-top": {
-    initial: { y: "-100%", opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-    exit: { y: "-100%", opacity: 0 },
+    initial: {y: "-100%", opacity: 0},
+    animate: {y: 0, opacity: 1},
+    exit: {y: "-100%", opacity: 0},
   },
   "from-left": {
-    initial: { x: "-100%", opacity: 0 },
-    animate: { x: 0, opacity: 1 },
-    exit: { x: "-100%", opacity: 0 },
+    initial: {x: "-100%", opacity: 0},
+    animate: {x: 0, opacity: 1},
+    exit: {x: "-100%", opacity: 0},
   },
   "from-right": {
-    initial: { x: "100%", opacity: 0 },
-    animate: { x: 0, opacity: 1 },
-    exit: { x: "100%", opacity: 0 },
+    initial: {x: "100%", opacity: 0},
+    animate: {x: 0, opacity: 1},
+    exit: {x: "100%", opacity: 0},
   },
   fade: {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
+    initial: {opacity: 0},
+    animate: {opacity: 1},
+    exit: {opacity: 0},
   },
   "top-in-bottom-out": {
-    initial: { y: "-100%", opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-    exit: { y: "100%", opacity: 0 },
+    initial: {y: "-100%", opacity: 0},
+    animate: {y: 0, opacity: 1},
+    exit: {y: "100%", opacity: 0},
   },
   "left-in-right-out": {
-    initial: { x: "-100%", opacity: 0 },
-    animate: { x: 0, opacity: 1 },
-    exit: { x: "100%", opacity: 0 },
+    initial: {x: "-100%", opacity: 0},
+    animate: {x: 0, opacity: 1},
+    exit: {x: "100%", opacity: 0},
   },
 };
 
@@ -83,7 +84,7 @@ export default function HeroVideoDialog({
         className="relative cursor-pointer group"
         onClick={() => setIsVideoOpen(true)}
       >
-        <img
+        <Image
           src={thumbnailSrc}
           alt={thumbnailAlt}
           width={1920}
@@ -109,15 +110,15 @@ export default function HeroVideoDialog({
       <AnimatePresence>
         {isVideoOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
             onClick={() => setIsVideoOpen(false)}
-            exit={{ opacity: 0 }}
+            exit={{opacity: 0}}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md"
           >
             <motion.div
               {...selectedAnimation}
-              transition={{ type: "spring", damping: 30, stiffness: 300 }}
+              transition={{type: "spring", damping: 30, stiffness: 300}}
               className="relative w-full max-w-4xl aspect-video mx-4 md:mx-0"
             >
               <motion.button className="absolute -top-16 right-0 text-white text-xl bg-neutral-900/50 ring-1 backdrop-blur-md rounded-full p-2 dark:bg-neutral-100/50 dark:text-black">
