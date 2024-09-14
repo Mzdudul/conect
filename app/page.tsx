@@ -135,7 +135,7 @@ export default function Home() {
           <div className="text-center xl:-ml-28 md:pl-5 ">
             <h1 className="text-2xl text-center md:lg:text-start  md:lg:text-4xl md:-mt-16 text-yellow-400 font-light">
               NÃO PAGUE MAIS CARO{" "}
-              <p className="text-white font-medium"> POR PUCO CONTEÚDO.</p>
+              <p className="text-white font-medium"> POR POUCO CONTEÚDO.</p>
             </h1>
 
             <p className="text-center md:lg:text-lg  mt-8 text-yellow-400 md:lg:text-start ">
@@ -152,7 +152,7 @@ export default function Home() {
       </div>
       <div className="mt-5 flex items-center justify-center flex-col">
         <h1 className=" text-yellow-400 text-center text-xl md:lg:text-3xl">
-          POR QUE A CONECT É TÃO EFICIENTE??
+          POR QUE A CONECT É TÃO EFICIENTE?
         </h1>
         <h2 className="text-center mt-5 text-3xl">
           Veja o vídeo abaixo <br /> e entenda como funciona!
@@ -183,7 +183,7 @@ export default function Home() {
         <h2 className="text-center md:lg:text-3xl mt-5 text-2xl">
           Com a CONECT você <br />{" "}
           <p className="text-2xl md:lg:text-3xl text-yellow-400 font-bold">
-            pagará apenas **** o mês!!
+            pagará apenas R$19,90 o mês!!
           </p>
         </h2>
 
@@ -208,7 +208,7 @@ export default function Home() {
               </h1>
 
               <p className="text-center mt-6 md:lg:text-xl text-yellow-400 md:lg:text-start">
-                O CineFlick oferece um aplicativo exclusivo, totalmente{" "}
+                A Conect oferece um aplicativo exclusivo, totalmente{" "}
                 <br className="hidden md:lg:flex" />
                 compatível com seu aparelho de TV Box. Com mais de 100.000{" "}
                 <br className="hidden md:lg:flex" />
@@ -225,9 +225,8 @@ export default function Home() {
             </h1>
             <p className="text-center mt-6 md:lg:text-2xl">
               De lançamentos a antigos, aqui você encontra as mais aclamadas
-              <br className="hidden md:lg:flex" />
-              séries e filmes do momento, tudo que você procura em um único
-              lugar!
+              séries <br /> e filmes do momento, tudo que você procura em um
+              único lugar!
             </p>
           </div>
           <div className="relative mt-14 flex h-[700px] w-screen flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
